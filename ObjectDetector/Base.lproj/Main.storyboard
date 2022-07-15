@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Il-Gc-Aol">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wc9-iH-GUq">
+            <objects>
+                <viewController id="1Il-Gc-Aol" customClass="ViewController" customModule="ObjectDetector" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hdI-iG-qKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-EM-f7g">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5ZN-EM-f7g" secondAttribute="height" multiplier="1:1" id="7Ev-nV-Oy7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J86-9A-qV6">
+                                <rect key="frame" x="30" y="645" width="354" height="51"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.38823529410000002" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="c9W-kV-fVm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhotoButtonDidTouch:" destination="1Il-Gc-Aol" eventType="touchUpInside" id="f18-Cb-srs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xda-He-75g">
+                                <rect key="frame" x="30" y="574" width="354" height="51"/>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.38823529411764707" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="QZh-16-9LA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Find Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findButtonDidTouch:" destination="1Il-Gc-Aol" eventType="touchUpInside" id="BoV-2n-k9V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYL-Jc-Hm1">
+                                <rect key="frame" x="186" y="424" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C6m-O6-781" firstAttribute="trailing" secondItem="xda-He-75g" secondAttribute="trailing" constant="30" id="5qF-ab-uR9"/>
+                            <constraint firstItem="J86-9A-qV6" firstAttribute="leading" secondItem="C6m-O6-781" secondAttribute="leading" constant="30" id="Bq5-WL-Xw4"/>
+                            <constraint firstItem="xda-He-75g" firstAttribute="leading" secondItem="C6m-O6-781" secondAttribute="leading" constant="30" id="CJW-XE-dJt"/>
+                            <constraint firstItem="J86-9A-qV6" firstAttribute="top" secondItem="xda-He-75g" secondAttribute="bottom" constant="20" id="Imh-gI-ZGE"/>
+                            <constraint firstItem="C6m-O6-781" firstAttribute="trailing" secondItem="J86-9A-qV6" secondAttribute="trailing" priority="995" constant="30" id="MZi-5q-QEh"/>
+                            <constraint firstItem="5ZN-EM-f7g" firstAttribute="top" secondItem="hdI-iG-qKJ" secondAttribute="top" id="SQp-EB-eES"/>
+                            <constraint firstItem="jYL-Jc-Hm1" firstAttribute="top" secondItem="5ZN-EM-f7g" secondAttribute="bottom" constant="10" id="aGn-ur-4kk"/>
+                            <constraint firstItem="5ZN-EM-f7g" firstAttribute="leading" secondItem="C6m-O6-781" secondAttribute="leading" id="gDF-ct-lwN"/>
+                            <constraint firstItem="5ZN-EM-f7g" firstAttribute="trailing" secondItem="C6m-O6-781" secondAttribute="trailing" id="kYq-Ex-1z4"/>
+                            <constraint firstItem="C6m-O6-781" firstAttribute="bottom" secondItem="J86-9A-qV6" secondAttribute="bottom" constant="40" id="v0Y-lG-73Z"/>
+                            <constraint firstItem="jYL-Jc-Hm1" firstAttribute="centerX" secondItem="hdI-iG-qKJ" secondAttribute="centerX" id="v2o-7k-TID"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C6m-O6-781"/>
+                    </view>
+                    <connections>
+                        <outlet property="objectImageView" destination="5ZN-EM-f7g" id="m1e-eg-hyt"/>
+                        <outlet property="resultsLabel" destination="jYL-Jc-Hm1" id="q2y-XS-Lqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBr-49-Dat" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.380434782608699"/>
+        </scene>
+    </scenes>
+</document>
